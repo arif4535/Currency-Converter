@@ -1,0 +1,94 @@
+<!-- <div class="selection-container">
+  <form [formGroup]="currencyForm" class="form-box"
+  (ngSubmit)="convert()">
+  <div class="box">
+    <input type="text" formControlName="amount"/>
+    <select formControlName="originCountry">
+      <option value="USD">dolar</option>
+      <option value="EUR">eur</option>
+      <option value="TRY">Türk</option>
+    </select>
+  </div>
+  <p class="title">to</p>
+  <select formControlName="targetCountry">
+    <option value="USD">dolar</option>
+    <option value="EUR">eur</option>
+    <option value="TRY">Türk</option>
+  </select>
+  <button type="submit"> submit</button>
+  </form>
+<div class="result-container">
+  <p class="title"><span>{{value$ | async}}</span></p>
+</div>
+</div> -->
+<!-- <div class="container text-center">
+  <form [formGroup]="currencyForm" class="form-box"
+  (ngSubmit)="convert()">
+
+  <div row align-items-center>
+    <div class="card text-bg-primary mb-3" style="max-width: 30rem;">
+  <div class="select-container">
+    <div class="col-md-12">
+      <label for="amount " class="form-label" >Amount</label>
+      <input type="text" formControlName="amount"/>
+      <select  class="form-select mt-3"  >
+      <option value="USD"> US Dollar</option>
+      <option value="TRY"> Turk </option>
+      <option value="EUR"> İngiliz</option>
+    </select>
+    to
+    <select  class="form-select "   >
+      <option value="USD"> US Dollar</option>
+      <option value="TRY"> Turk </option>
+      <option value="EUR"> İngiliz</option>
+    </select>
+    </div>
+    <button type="submit"> submit</button>
+    <div class="result-container">
+      <P>=</P>
+      <p class="title"><span>{{value$ | async}}</span></p>
+   
+    </div>
+    </div>
+  </div>
+  </div>
+  <div class="result-container">
+  </div>
+  </form>
+ 
+</div> -->
+<div class="container ">
+  <form [formGroup]="currencyForm" class="form-box"
+  (ngSubmit)="convert()">
+  <div class="row d-flex justify-content-center " >
+<div class="card text-bg-primary mb-3 " style="max-width: 30rem;" >
+  <div class="select-container ">
+    <div class="col-md-12  ">
+      <label for="amount " class="form-label" >Amount</label>
+    </div>
+    <input type="number" class="form-control" value="0"  id="amount"placeholder="amount" formControlName="amount">
+    
+    <select  class="form-select mt-3" formControlName="originCountry">
+      >
+      <option value="USD"> US Dollar</option>
+      <option value="TRY"> Turk </option>
+      <option value="EUR"> İngiliz</option>
+    </select>
+    to
+    <select #c2 class="form-select " formControlName="targetCountry" >
+      <option value="USD"> US Dollar</option>
+      <option value="TRY"> Turk </option>
+      <option value="EUR"> İngiliz</option>
+    </select>
+    </div>
+    <button type="button" (click)="convert()" class="btn btn-success mt-3">Convert</button> 
+       <div class="result-container">
+        <p class="title"><span>{{value$ | async}}</span></p>
+
+     
+      </div>
+
+</div>
+</div>
+  </form>
+</div>
